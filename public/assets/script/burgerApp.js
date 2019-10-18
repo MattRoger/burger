@@ -14,7 +14,7 @@ $(function() {
       }).then(
         function() {
           console.log("changed eat to", newEat);
-          // location.reload();
+          location.reload();
         }
       );
     });
@@ -23,7 +23,6 @@ $(function() {
       event.preventDefault();
         var newBurger = {
        name: $("#ca").val().trim(),
-       eaten: $("[name=eaten]:checked").val().trim()
       };
       $.ajax("/api/burgers", {
         type: "POST",
@@ -31,7 +30,7 @@ $(function() {
       }).then(
         function() {
           console.log("created new burger");
-          // location.reload();
+          location.reload();
         }
       );
     });
