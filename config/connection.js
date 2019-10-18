@@ -8,15 +8,11 @@ var connection = mysql.createConnection({
   database: "burger_db"
 });
 
-
-//if the server contains the variable, it connects to the jawsDB
 if (process.env.JAWSDB_URL){
   connection = mysql.createConnection(process.env.JAWSDB_URL);
-  
-//if no variable, it falls back on an explicitly defined local database
-} else {
 
-connection = mysql.createConnection({
+} else {
+  connection = mysql.createConnection({
     host: "localhost",
     port: 8889,
     user: "root",
